@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Replite – Payment</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #0a0a0a;
+        color: white;
+        text-align: center;
+    }
+
+    .promo-section {
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #ff7a18, #af002d 70%);
+        box-shadow: 0px 0px 35px rgba(255, 122, 24, 0.6);
+    }
+
+    .promo-title {
+        font-size: 3rem;
+        font-weight: 800;
+    }
+
+    .payment-box {
+        margin: 40px auto;
+        width: 380px;
+        background: rgba(255,255,255,0.1);
+        padding: 25px;
+        border-radius: 18px;
+        backdrop-filter: blur(8px);
+    }
+
+    .method-btn {
+        background: white;
+        color: black;
+        padding: 12px 20px;
+        margin: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        display: inline-block;
+        transition: .2s;
+    }
+
+    .method-btn.active {
+        background: #ffd7b5;
+    }
+
+    input {
+        width: 94%;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        margin: 8px 0;
+    }
+
+    .pay-btn {
+        margin-top: 15px;
+        width: 100%;
+        padding: 14px;
+        background: #ffcf9f;
+        border: none;
+        border-radius: 10px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: .2s;
+        font-size: 1.2rem;
+    }
+
+    .pay-btn:hover {
+        background: white;
+        transform: scale(1.03);
+    }
+
+    /* popup */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        color: #000;
+        padding: 30px;
+        border-radius: 20px;
+        width: 300px;
+        font-weight: 700;
+        box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+</style>
+
+</head>
+<body>
+
+<section class="promo-section">
+    <h1 class="promo-title">🔥 Replite Premium 🔥</h1>
+    <p>Special Launch Offer – ₹69 Only!</p>
+</section>
+
+<div class="payment-box">
+
+    <h2>Select Payment Method</h2>
+
+    <div>
+        <span class="method-btn" onclick="showCard()">💳 Card</span>
+        <span class="method-btn" onclick="showUPI()">📱 UPI</span>
+        <span class="method-btn" onclick="showBank()">💼 Netbanking</span>
+    </div>
+
+    <!-- CARD FIELDS -->
+    <div id="card-box" style="display:none;">
+        <input type="text" placeholder="Card Number">
+        <input type="text" placeholder="Name on Card">
+        <input type="text" placeholder="Expiry (MM/YY)">
+        <input type="text" placeholder="CVV">
+    </div>
+
+    <!-- UPI -->
+    <div id="upi-box" style="display:none;">
+        <input type="text" placeholder="UPI NUMBER">
+    </div>
+
+    <!-- BANK -->
+    <div id="bank-box" style="display:none;">
+        <input type="text" placeholder="Bank Name">
+        <input type="text" placeholder="Account Number">
+    </div>
+    <a href="MEETTHETEAM.html">
+    <button class="pay-btn" onclick="payNow()">Pay ₹69</button>
+    </a>
+</div>
+
+<div class="popup" id="popup">
+    Payment Successful 🎉  
+    <br><br>Welcome to Replite Premium!
+</div>
+
+<script>
+    function hideAll() {
+        document.getElementById("card-box").style.display = "none";
+        document.getElementById("upi-box").style.display = "none";
+        document.getElementById("bank-box").style.display = "none";
+
+        let buttons = document.getElementsByClassName("method-btn");
+        for (let b of buttons) b.classList.remove("active");
+    }
+
+    function showCard() {
+        hideAll();
+        document.getElementById("card-box").style.display = "block";
+ event.target.classList.add("active");
+    }
+
+    function showUPI() {
+        hideAll();
+        document.getElementById("upi-box").style.display = "block";
+ event.target.classList.add("active");
+    }
+
+    function showBank() {
+        hideAll();
+        document.getElementById("bank-box").style.display = "block";
+ event.target.classList.add("active");
+    }
+
+    function payNow() {
+        document.getElementById("popup").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("popup").style.display = "none";
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>

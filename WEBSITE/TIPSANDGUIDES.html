@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tips and Guides – RepliteTech</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f1f4f8;
+        color: #1a1a1a;
+    }
+
+    /* Top Navigation Tabs */
+    .nav {
+        display: flex;
+        gap: 12px;
+        padding: 14px;
+        background: #d8dce3;
+        border-bottom: 2px solid #b8bdc4;
+    }
+    .nav div {
+        padding: 8px 18px;
+        background: #bfc5ce;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    /* Search Bar */
+    .search {
+        background: #d4d7dc;
+        padding: 12px;
+        font-size: 17px;
+        text-align: center;
+        color: #555;
+    }
+
+    /* Animated Page Heading */
+    h1 {
+        font-size: 55px;
+        text-align: center;
+        margin-top: 25px;
+        animation: fadeIn 2.5s ease;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.28);
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-25px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tips Row */
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 310px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 18px;
+        box-shadow: 0 0 16px rgba(0,0,0,0.18);
+        animation: glow 4s infinite ease-in-out;
+    }
+
+    @keyframes glow {
+        0% { box-shadow: 0 0 12px rgba(160, 0, 255, 0.24); }
+        50% { box-shadow: 0 0 20px rgba(160, 0, 255, 0.45); }
+        100% { box-shadow: 0 0 12px rgba(160, 0, 255, 0.24); }
+    }
+
+    .tag {
+        font-weight: 700;
+        background: #c8ccd2;
+        padding: 8px 12px;
+        border-radius: 30px;
+        display: inline-block;
+        margin-bottom: 14px;
+    }
+
+    .marker {
+        width: 6px;
+        height: 45px;
+        background: #c91b69;
+        margin-right: 8px;
+        border-radius: 2px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Top Navigation -->
+<div class="nav">
+    <div>Title Page</div>
+    <div>Reporters</div>
+    <div>Introduction</div>
+    <div style="background:#90959d; color:white;">Overview</div>
+</div>
+
+<!-- Search Bar -->
+<div class="search">WWW. RepliteTech/Tipsandguides.com</div>
+
+<!-- Page Title -->
+<h1>Tips and Guides</h1>
+
+<!-- Tips Section -->
+<div class="container">
+
+    <div class="card">
+        <span class="marker"></span><span class="tag">Set screen-time limits that fit your routine</span>
+        <p>Make a clear plan for when you’ll use your phone, laptop, or games—like after homework or for a fixed amount of time. This helps you stay focused and avoid scrolling for hours.</p>
+    </div>
+
+    <div class="card">
+        <span class="marker"></span><span class="tag">Use technology for learning before entertainment</span>
+        <p>Try to finish school tasks, research, or creative projects first. When you use tech with a purpose, it feels more productive and reduces stress.</p>
+    </div>
+
+    <div class="card">
+        <span class="marker"></span><span class="tag">Protect your digital well-being</span>
+        <p>Keep notifications limited, avoid using devices late at night, and take short breaks during long screen use. This helps your eyes, your sleep, and your mental focus.</p>
+    </div>
+ <a href="QUIZESS.html">
+        <button class="next-btn" onclick="nextpage()">QUIZ</button>
+        </a>
+</div>
+
+</body>
+</html>
